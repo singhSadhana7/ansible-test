@@ -5,6 +5,11 @@
  
 
   tasks:
+  - name: Install packages
+      apt:
+        name: httpd
+        state: present
+        
   - name: Write the apache config file
     service:
       name: httpd

@@ -1,18 +1,25 @@
 ---
-- hosts: webservers 
+- name: Update web servers
+  hosts: webservers
   become: True
+ 
+
   tasks:
-  - name: Install packages
-    yum4:
+  - name: Ensure apache is at the latest version
+    ansible.builtin.yum4:
       name: httpd
       state: present
-  - name: Start Apache server
+  - name: Write the apache config file
     service:
       name: httpd
       state: started
       enabled: True
+      
+
   - name: Deploy static website
     copy:
       src: index.html
       dest: /var/www/html/
-...
+      
+ ...
+   

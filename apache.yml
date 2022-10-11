@@ -1,7 +1,7 @@
 ---
 - name: Update web servers
   hosts: webservers
-  become: True
+  remote_user: root
  
 
   tasks:

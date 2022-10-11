@@ -5,8 +5,15 @@
  
 
   tasks:
+   - name: add new user
+     user:
+       name: web
+       password: 
+       state: present
+       shell: /etc/ansible
+       system: no
   - name: Install packages
-    ansible.builtin.yum:
+    yum4:
       name: httpd
       state: present
         

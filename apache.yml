@@ -6,7 +6,7 @@
 
   tasks:
   - name: Ensure apache is at the latest version
-    yum:
+    yum4:
       name: httpd
       state: present
   - name: Write the apache config file

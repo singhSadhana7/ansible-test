@@ -6,7 +6,7 @@
 
   tasks:
   - name: Install packages
-    yum4:
+    ansible.builtin.yum:
       name: httpd
       state: present
         

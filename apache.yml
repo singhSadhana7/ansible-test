@@ -6,9 +6,9 @@
 
   tasks:
   - name: Install packages
-      apt install:
-        name: httpd
-        state: present
+    yum4:
+      name: httpd
+      state: present
         
   - name: Write the apache config file
     service:

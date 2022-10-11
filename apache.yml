@@ -5,10 +5,6 @@
  
 
   tasks:
-  - name: Ensure apache is at the latest version
-    usr/bin/yum4:
-      name: httpd
-      state: present
   - name: Write the apache config file
     service:
       name: httpd

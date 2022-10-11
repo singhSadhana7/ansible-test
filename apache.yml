@@ -6,7 +6,7 @@
 
   tasks:
   - name: Install packages
-      apt:
+      apt install:
         name: httpd
         state: present
         

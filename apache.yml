@@ -5,13 +5,7 @@
  
 
   tasks:
-   - name: add new user
-     user:
-       name: web
-       password: 
-       state: present
-       shell: /etc/ansible
-       system: no
+  
   - name: Install packages
     yum4:
       name: httpd

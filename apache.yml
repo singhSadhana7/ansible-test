@@ -5,11 +5,6 @@
  
 
   tasks:
-  
-  - name: Install packages
-    yum4:
-      name: httpd
-      state: present
         
   - name: Write the apache config file
     service:

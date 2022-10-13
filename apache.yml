@@ -3,6 +3,10 @@
   hosts: 34.218.227.195
  
   tasks:
+  
+  - name: This executes, fails, and the failure is ignored
+    ansible.builtin.command: /bin/true
+    
    - name: Install packages
      ansible.builtin.yum:
       name: httpd

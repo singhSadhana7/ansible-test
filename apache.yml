@@ -24,6 +24,8 @@
       
 
    - name: Deploy static website
+     become: yes
+     become_user: root
      copy:
        src: index.html
        dest: /var/www/html/

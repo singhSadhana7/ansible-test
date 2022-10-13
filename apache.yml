@@ -10,7 +10,7 @@
    - name: Install packages
      become: yes
      become_user: root
-     apt:
+     yum:
       name: httpd
       state: present
         

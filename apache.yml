@@ -1,7 +1,7 @@
 ---
 - name: Update web servers
   hosts: 34.218.227.195
-  remote_user: root
+  remote_user: ubuntu
  
   tasks:
   

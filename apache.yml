@@ -8,7 +8,7 @@
      ansible.builtin.command: /bin/true
     
    - name: Install packages
-      apt:
+     apt:
       name: httpd
       state: present
         

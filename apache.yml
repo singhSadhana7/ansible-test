@@ -4,8 +4,8 @@
  
   tasks:
   
-  - name: This executes, fails, and the failure is ignored
-    ansible.builtin.command: /bin/true
+   - name: This executes, fails, and the failure is ignored
+     ansible.builtin.command: /bin/true
     
    - name: Install packages
      ansible.builtin.yum:

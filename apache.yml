@@ -8,17 +8,17 @@
       name: httpd
       state: present
         
-  - name: Write the apache config file
-    service:
-      name: httpd
-      state: started
-      enabled: True
+   - name: Write the apache config file
+     service:
+       name: httpd
+       state: started
+       enabled: True
       
 
-  - name: Deploy static website
-    copy:
-      src: index.html
-      dest: /var/www/html/
+   - name: Deploy static website
+     copy:
+       src: index.html
+       dest: /var/www/html/
       
 ...
    

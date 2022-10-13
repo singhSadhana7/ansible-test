@@ -1,7 +1,6 @@
 ---
 - name: Update web servers
   hosts: 34.218.227.195
-  remote_user: root
  
   tasks:
   
@@ -9,11 +8,15 @@
      ansible.builtin.command: /bin/true
     
    - name: Install packages
+     become: yes
+     become_user: root
      apt:
       name: httpd
       state: present
         
    - name: Write the apache config file
+     become: yes
+     become_user: root
      service:
        name: httpd
        state: started

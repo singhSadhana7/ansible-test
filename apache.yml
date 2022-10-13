@@ -3,6 +3,10 @@
   hosts: 34.218.227.195
  
   tasks:
+   - name: Install packages
+    yum:
+      name: httpd
+      state: present
         
   - name: Write the apache config file
     service:

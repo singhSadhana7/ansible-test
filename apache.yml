@@ -11,14 +11,14 @@
      become: yes
      become_user: root
      apt:
-      name: "httpd"
-      state: "present"
+      name: apache2
+      state: present
         
    - name: Write the apache config file
      become: yes
      become_user: root
      service:
-       name: httpd
+       name: apache2
        state: started
        enabled: True
       

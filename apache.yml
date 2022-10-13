@@ -4,7 +4,7 @@
  
   tasks:
    - name: Install packages
-    yum:
+     yum:
       name: httpd
       state: present
         
